@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com/LineageOS"
+          name="lineageos"
+          revision="lineage-22.1" />
+  <remote fetch="ssh://git@github.com/roms-experimental"
+          name="roms-experimental"
+          revision="lineage-22.1" />
+  <remote fetch="ssh://git@github.com/Infinix-GT-10-Pro-Resources"
+          name="x6739-src"
+          revision="v/pixelos" />
+
+  <!-- Sync required hals and sepolicy -->
+  <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="roms-experimental" />
+  <project path="hardware/mediatek" name="android_hardware_mediatek" remote="lineageos" />
+  <project path="hardware/transsion" name="android_hardware_transsion" remote="roms-experimental" />
+
+  <!-- Sync X6739 trees -->
+  <project path="device/infinix/X6739" name="android_device_infinix_X6739" remote="x6739-src" />
+  <project path="device/infinix/X6739-kernel" name="android_device_infinix_X6739-kernel" remote="x6739-src" />
+  <project path="vendor/infinix/X6739" name="android_vendor_infinix_X6739" remote="x6739-src" />
+</manifest>
